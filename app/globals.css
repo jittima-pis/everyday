@@ -1,44 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-destructive: var(--destructive);
+
+  --color-brown-3: #F6EEE7;
+  --color-brown-6: #E4CDB7;
+  --color-brown-10: #A07553;
+  --color-brown-12: #3E332E;
+  --color-orange-8: #EC9455;
+  --color-orange-9: #F76B15;
+  --color-orange-10: #EF5F00;
+  --color-orange-11: #CC4E00;
+  --color-orange-12: #582D1D;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
 
 /* Design Tokens from Figma - Primary Mode (Brown/Warm Theme) */
 :root {
-  /* Backgrounds */
-  --background: #FCF9F6;           /* Very light warm beige */
-  --background-secondary: #F0E4D9; /* Light warm beige/cream */
-  --background-tertiary: #E4CDB7;  /* Light brown */
-
-  /* Foregrounds/Text */
-  --foreground: #3E332E;           /* Dark brown - primary text */
-  --foreground-secondary: #815E46; /* Medium brown - secondary text */
-  --foreground-tertiary: #543E2E;  /* Dark accent brown */
-
-  /* UI Elements */
-  --border: #E4CDB7;               /* Light brown border */
-  --border-secondary: #815E46;     /* Medium brown border */
-
-  /* Interactive */
-  --primary: #3E332E;              /* Dark brown - buttons, links */
-  --primary-foreground: #FAFAFA;   /* Off-white text on primary */
-
-  /* Card */
-  --card: #FCF9F6;                 /* Card background */
-  --card-foreground: #3E332E;      /* Card text */
-
-  /* Muted */
-  --muted: #F5F5F5;                /* Light gray */
-  --muted-foreground: #815E46;     /* Medium brown muted text */
-
-  /* Accent */
-  --accent: #F0E4D9;               /* Light beige accent */
-  --accent-foreground: #3E332E;    /* Dark brown accent text */
-
-  /* Destructive */
-  --destructive: #DC2626;          /* Red for errors */
+  --background: #FCF9F6;
+  --background-secondary: #F0E4D9;
+  --background-tertiary: #E4CDB7;
+  --foreground: #3E332E;
+  --foreground-secondary: #815E46;
+  --foreground-tertiary: #543E2E;
+  --border: #E4CDB7;
+  --border-secondary: #815E46;
+  --primary: #3E332E;
+  --primary-foreground: #FAFAFA;
+  --card: #FCF9F6;
+  --card-foreground: #3E332E;
+  --muted: #F5F5F5;
+  --muted-foreground: #815E46;
+  --accent: #F0E4D9;
+  --accent-foreground: #3E332E;
+  --destructive: #DC2626;
   --destructive-foreground: #FAFAFA;
-
-  /* Radius */
   --radius: 0.75rem;
 }
 
@@ -53,30 +66,13 @@
   }
 }
 
-/* Custom utility classes matching Figma design */
 @layer utilities {
-  .text-primary-dark {
-    color: #3E332E;
-  }
-  .text-brown-medium {
-    color: #815E46;
-  }
-  .text-brown-accent {
-    color: #543E2E;
-  }
-  .bg-beige-light {
-    background-color: #FCF9F6;
-  }
-  .bg-beige-medium {
-    background-color: #F0E4D9;
-  }
-  .bg-brown-light {
-    background-color: #E4CDB7;
-  }
-  .bg-brown-dark {
-    background-color: #3E332E;
-  }
-  .border-brown-light {
-    border-color: #E4CDB7;
-  }
+  .text-primary-dark { color: #3E332E; }
+  .text-brown-medium { color: #815E46; }
+  .text-brown-accent { color: #543E2E; }
+  .bg-beige-light { background-color: #FCF9F6; }
+  .bg-beige-medium { background-color: #F0E4D9; }
+  .bg-brown-light { background-color: #E4CDB7; }
+  .bg-brown-dark { background-color: #3E332E; }
+  .border-brown-light { border-color: #E4CDB7; }
 }
